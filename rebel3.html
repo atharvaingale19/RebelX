@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RebelX - Premium Earbuds</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .top-strip {
+      background-color: #e63946;
+      color: white;
+      text-align: center;
+      padding: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .header .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header .logo img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .header .nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .header .nav ul li {
+      display: inline;
+    }
+
+    .header .nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('rebel.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: #ff3b2a;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #cc2e20;
+    }
+
+    /* About */
+    .about {
+      padding: 3rem 0;
+      background: #fff;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Features */
+    .features {
+      padding: 3rem 0;
+      background: #f0f0f0;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .feature-item {
+      background: #fff;
+      padding: 20px;
+      flex: 1 1 45%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #ff3b2a;
+    }
+
+    .feature-item p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Products */
+    .products {
+      padding: 3rem 0;
+      background: #fff;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: #f8f8f8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .social {
+  background: #fff;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.social h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #ff3b2a;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a i {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+.social-links a:hover {
+  color: #cc2e20;
+}
+
+
+
+    /* Footer */
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        flex-direction: column;
+      }
+
+      .product-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">Conducted by JD College of Engineering</div>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="rebelopenings.png" alt="RebelX Logo" />
+        RebelX
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#social">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Your Sound, Your Style</h2>
+      <p>Experience unmatched audio quality with RebelX premium earbuds.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About RebelX</h2>
+      <p>RebelX is dedicated to providing the best in audio technology. Our premium earbuds are designed to deliver exceptional sound quality, comfort, and style.
+      </p>
+      <p>At RebelX, we are committed to delivering premium audio solutions that blend impeccable performance with cutting-edge style, crafted for the modern-day youth. With our RebelX TWS earbuds, we combine high-end technology, sleek design, and unmatched versatility to redefine the way you experience sound. Whether you’re a gamer, a professional, a student, or an athlete, RebelX is engineered to elevate your lifestyle, making it more immersive, productive, and connected.</p>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Crystal Clear Sound</h3>
+          <p>Immerse yourself in detailed audio clarity like never before.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Long-lasting Battery</h3>
+          <p>Enjoy hours of uninterrupted music and calls.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Ergonomic Design</h3>
+          <p>Fits perfectly in your ears for maximum comfort.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Noise Cancellation</h3>
+          <p>Block out the world and focus on what matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="nova.jpg" alt="Earbud Model 1">
+          <h3>RebelX - Nova</h3>
+          <p>Athelete Edition</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+          <img src="pulse.jpg" alt="Earbud Model 2">
+          <h3>RebelX - Pulse</h3>
+          <p>Gaming Edition</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="product-card">
+          <img src="rebel1.png" alt="Earbud Model 3">
+          <h3>RebelX - Classic</h3>
+          <p>Signature Edition</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="social">
+    <div class="container">
+      <h2>Follow Us on Social Platforms</h2>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 RebelX. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
